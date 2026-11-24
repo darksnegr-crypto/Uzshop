@@ -1,0 +1,139 @@
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f4f6fb;
+  color: #1e293b;
+}
+
+/* Tepa menyu */
+.navbar-custom {
+  background: #0f172a;
+  padding: 12px 0;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.25);
+}
+.navbar-brand { font-weight: 700; font-size: 22px; letter-spacing: 0.5px; }
+
+/* Kartochkalar (hamma joyda) */
+.card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.07);
+}
+
+/* Tugmalar */
+.btn { border-radius: 10px; font-weight: 500; transition: all 0.2s; }
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: #4f46e5; border-color: #4f46e5; }
+.btn-primary:hover { background: #4338ca; border-color: #4338ca; }
+
+/* Formalar */
+.form-control, .form-select { border-radius: 10px; padding: 10px 14px; border-color: #dbe0ea; }
+.form-control:focus, .form-select:focus { border-color: #4f46e5; box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15); }
+
+/* Website */
+.hero {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed 55%, #0ea5e9);
+  color: white;
+  padding: 70px 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  top: -80px;
+  width: 320px;
+  height: 320px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+}
+.hero h1 { font-weight: 700; font-size: 44px; max-width: 600px; }
+.hero p { font-size: 18px; opacity: 0.9; max-width: 520px; }
+
+.feature {
+  background: white;
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.07);
+  margin-top: -30px;
+  position: relative;
+  z-index: 2;
+}
+.feature span { font-size: 28px; }
+
+.section-title { font-weight: 700; margin: 40px 0 16px; }
+
+/* Kategoriya tugmalari */
+.cat-btn {
+  border: 1px solid #dbe0ea;
+  background: white;
+  color: #475569;
+  padding: 8px 20px;
+  margin: 0 8px 8px 0;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.cat-btn:hover { border-color: #4f46e5; color: #4f46e5; }
+.cat-btn.active { background: #4f46e5; border-color: #4f46e5; color: white; }
+
+/* Mahsulot kartochkasi */
+.product-card { overflow: hidden; transition: all 0.3s; animation: appear 0.5s; }
+.product-card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(79, 70, 229, 0.18); }
+.product-img { height: 190px; overflow: hidden; background: #e2e8f0; }
+.product-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.product-card:hover .product-img img { transform: scale(1.08); }
+.category-pill {
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  align-self: flex-start;
+  margin-bottom: 8px;
+}
+.price { font-size: 18px; font-weight: 700; color: #4f46e5; }
+.btn-buy { background: linear-gradient(135deg, #4f46e5, #7c3aed); color: white; border: none; }
+.btn-buy:hover { color: white; box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35); }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+.footer { background: #0f172a; color: #94a3b8; padding: 28px 0; margin-top: 60px; text-align: center; }
+
+/*Admin panel */
+.page-head { margin: 28px 0 20px; }
+.page-head h3 { font-weight: 700; margin: 0; }
+
+.stat-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.07);
+  transition: all 0.3s;
+}
+.stat-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12); }
+.stat-icon { width: 56px; height: 56px; border-radius: 14px; font-size: 26px; display: flex; align-items: center; justify-content: center; }
+.icon-blue { background: #e0e7ff; }
+.icon-green { background: #d1fae5; }
+.icon-orange { background: #fef3c7; }
+.stat-label { color: #64748b; font-size: 14px; }
+.stat-value { font-size: 28px; font-weight: 700; }
+
+.nav-pills .nav-link { color: #475569; border-radius: 30px; padding: 9px 22px; font-weight: 500; margin-right: 8px; background: white; }
+.nav-pills .nav-link.active { background: #4f46e5; color: white; }
+
+.table { border-radius: 16px; overflow: hidden; box-shadow: 0 2px 10px rgba(15, 23, 42, 0.07); }
+.table thead { background: #0f172a; color: white; }
+.table th { font-weight: 500; font-size: 13px; padding: 14px 12px; }
+.table td { padding: 12px; }
